@@ -24,6 +24,7 @@ void serialAbout( void )
 {
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
+  Serial.println( "avr@ardushell " );
   Serial.println( "" );
   Serial.println( "Commands:" );
   Serial.println( " format    clear the EEProm" );
