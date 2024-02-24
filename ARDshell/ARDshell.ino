@@ -35,8 +35,15 @@ void serialAbout( void )
   Serial.println( " print     text dump of the EEProm" );
   Serial.println( " record    erase EEProm until '.', buffer fill or reset" );
   Serial.println( " poke A D  poke value D into address a (decimal values)" );
+  Serial.println( " coder     info about programmer" );
 }
 
+void coder( void )
+{
+  Serial.println( "" );
+  Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
+  Serial.println( "" );
+}
 
 // getSerialLine
 //   gets a line (terminated by \n newline) from the serial port
@@ -200,7 +207,7 @@ void recordEE( void )
     //Serial.println( ".>" );
     
     if( nbytes >= E2END ) {
-      Serial.println( "EEProm space overflow." );
+      Serial.println( "[ERROR] EEProm space overflow." );
       done = true;
     }
   } while( !done );
@@ -254,6 +261,7 @@ void handleSerial()
   else if( !strcmp( linebuf, "dump" ))     dumpEE();
   else if( !strcmp( linebuf, "print" ))    printEE();
   else if( !strcmp( linebuf, "record" ))   recordEE();
+  else if( !strcmp( linebuf, "coder" ))   coder();
   else {
     // hack for now...
     linebuf[4] = '\0';
