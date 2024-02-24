@@ -25,9 +25,6 @@ void serialAbout( void )
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
   Serial.println( "" );
-  Serial.print( " Flash size: " ); Serial.print( (unsigned) FLASHEND +1 ); Serial.println( " bytes" );
-  Serial.print( "   RAM size: " ); Serial.print( RAMEND +1 ); Serial.println( " bytes" );
-  Serial.print( "EEProm size: " ); Serial.print( E2END +1 ); Serial.println( " bytes" );
   Serial.println( " " );
   Serial.println( "Commands:" );
   Serial.println( " format    clear the EEProm" );
@@ -36,12 +33,22 @@ void serialAbout( void )
   Serial.println( " record    erase EEProm until '.', buffer fill or reset" );
   Serial.println( " poke A D  poke value D into address a (decimal values)" );
   Serial.println( " coder     info about programmer" );
+  Serial.println( " neofetch     info about PC specs" );
 }
 
 void coder( void )
 {
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
+  Serial.println( "" );
+}
+
+void neofetch( void )
+{
+  Serial.println( "" );
+  Serial.print( " Flash size: " ); Serial.print( (unsigned) FLASHEND +1 ); Serial.println( " bytes" );
+  Serial.print( "   RAM size: " ); Serial.print( RAMEND +1 ); Serial.println( " bytes" );
+  Serial.print( "EEProm size: " ); Serial.print( E2END +1 ); Serial.println( " bytes" );
   Serial.println( "" );
 }
 
@@ -262,6 +269,7 @@ void handleSerial()
   else if( !strcmp( linebuf, "print" ))    printEE();
   else if( !strcmp( linebuf, "record" ))   recordEE();
   else if( !strcmp( linebuf, "coder" ))   coder();
+  else if( !strcmp( linebuf, "neofetch" ))   neofetch();
   else {
     // hack for now...
     linebuf[4] = '\0';
@@ -275,7 +283,7 @@ void handleSerial()
   
   // draw the prompt
   Serial.println( "" );
-  Serial.print( "> " );
+  Serial.print( "avr@ardushell> " );
 }
 
 void loop()
