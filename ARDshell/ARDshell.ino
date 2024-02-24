@@ -15,7 +15,7 @@ void setup()
   Serial.flush();
    
   digitalWrite( kLED, HIGH );
-  coder();
+  init();
 }
 
 
@@ -30,11 +30,10 @@ void serialAbout( void )
   Serial.println( " print     text dump of the EEProm" );
   Serial.println( " record    erase EEProm until '.', buffer fill or reset" );
   Serial.println( " poke A D  poke value D into address a (decimal values)" );
-  Serial.println( " coder     info about programmer" );
   Serial.println( " neofetch  info about PC specs" );
 }
 
-void coder( void )
+void init( void )
 {
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
@@ -268,7 +267,7 @@ void handleSerial()
   else if( !strcmp( linebuf, "dump" ))     dumpEE();
   else if( !strcmp( linebuf, "print" ))    printEE();
   else if( !strcmp( linebuf, "record" ))   recordEE();
-  else if( !strcmp( linebuf, "coder" ))   coder();
+  else if( !strcmp( linebuf, "init" ))   init();
   else if( !strcmp( linebuf, "neofetch" ))   neofetch();
   else {
     // hack for now...
