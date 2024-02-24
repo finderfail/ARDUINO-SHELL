@@ -15,6 +15,7 @@ void setup()
   Serial.flush();
    
   digitalWrite( kLED, HIGH );
+  coder();
 }
 
 
@@ -22,9 +23,6 @@ void setup()
 //   displays information about ARDUINO SHELL and help/commands
 void serialAbout( void )
 {
-  Serial.println( "" );
-  Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
-  Serial.println( "avr@ardushell " );
   Serial.println( "" );
   Serial.println( "Commands:" );
   Serial.println( " format    clear the EEProm" );
@@ -41,6 +39,7 @@ void coder( void )
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
   Serial.println( "avr@ardushell " );
+  Serial.println( "Press ? to help" );
   Serial.println( "" );
 }
 
