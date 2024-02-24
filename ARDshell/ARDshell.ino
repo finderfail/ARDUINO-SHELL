@@ -33,7 +33,7 @@ void serialAbout( void )
   Serial.println( " record    erase EEProm until '.', buffer fill or reset" );
   Serial.println( " poke A D  poke value D into address a (decimal values)" );
   Serial.println( " coder     info about programmer" );
-  Serial.println( " neofetch     info about PC specs" );
+  Serial.println( " neofetch  info about PC specs" );
 }
 
 void coder( void )
