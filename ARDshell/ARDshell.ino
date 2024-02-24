@@ -15,7 +15,7 @@ void setup()
   Serial.flush();
    
   digitalWrite( kLED, HIGH );
-  init();
+  initOS();
 }
 
 
@@ -33,7 +33,7 @@ void serialAbout( void )
   Serial.println( " neofetch  info about PC specs" );
 }
 
-void init( void )
+void initOS( void )
 {
   Serial.println( "" );
   Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
@@ -267,7 +267,7 @@ void handleSerial()
   else if( !strcmp( linebuf, "dump" ))     dumpEE();
   else if( !strcmp( linebuf, "print" ))    printEE();
   else if( !strcmp( linebuf, "record" ))   recordEE();
-  else if( !strcmp( linebuf, "init" ))   init();
+  else if( !strcmp( linebuf, "initOS" ))   initOS();
   else if( !strcmp( linebuf, "neofetch" ))   neofetch();
   else {
     // hack for now...
