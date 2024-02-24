@@ -1,5 +1,5 @@
 #
-# makefile for command line TinyBasicPlus
+# makefile for command line ARDshell
 # (basic input version)
 #
 #  requires GCC tools
@@ -41,19 +41,19 @@ export CC  := gcc
 ########################################
 PROG := tbp$(EXEEXT)
 
-SRCS := TinyBasicPlus.cpp \
+SRCS := ARDshell.cpp \
         main.cpp
 
 OBJS := $(SRCS:%.cpp=%.o)
 
 all: $(PROG)
 
-$(PROG): TinyBasicPlus.o main.o
+$(PROG): ARDshell.o main.o
 	@echo link $@
 	@$(CXX) $(CXXFLAGS) $^ $(LDFLAGS) $(LIBS) -o $@
 
 
-TinyBasicPlus.cpp: ../TinyBasicPlus/TinyBasicPlus.ino
+TinyBasicPlus.cpp: ../ARDshell/ARDshell.ino
 	@echo Linking .cpp file to the Arduino .ino source
 	@ln -s $< $@
 
@@ -63,7 +63,7 @@ TinyBasicPlus.cpp: ../TinyBasicPlus/TinyBasicPlus.ino
 
 clean:
 	@echo removing generated files
-	@-rm -f $(OBJS) $(PROG) TinyBasicPlus.cpp
+	@-rm -f $(OBJS) $(PROG) ARDshell.cpp
 .PHONY: clean
 
 test: $(PROG)

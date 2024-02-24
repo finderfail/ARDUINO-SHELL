@@ -1,13 +1,3 @@
-// EEExplorer
-//
-//  simple shell-like tool for formatting/reading/writing contents of EEProm
-// 
-//  Scott Lawrence - yorgle@gmail.com
-//
-//  2013-Mar-01  v002  Added Poke, smarter Print
-//  2013-Feb-18  v001  Initial basic version
-
-
 #include <EEPROM.h>
 
 // kLED - the pin that the indicator LED is connected to.
@@ -29,11 +19,11 @@ void setup()
 
 
 // serialAbout
-//   displays information about EEExplorer and help/commands
+//   displays information about ARDUINO SHELL and help/commands
 void serialAbout( void )
 {
   Serial.println( "" );
-  Serial.println( "EEExplorer v002  Scott Lawrence  yorgle@gmail.com" );
+  Serial.println( "ARDUINO SHELL v0.1  Ilya Finderov" );
   Serial.println( "" );
   Serial.print( " Flash size: " ); Serial.print( (unsigned) FLASHEND +1 ); Serial.println( " bytes" );
   Serial.print( "   RAM size: " ); Serial.print( RAMEND +1 ); Serial.println( " bytes" );

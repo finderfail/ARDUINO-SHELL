@@ -42,7 +42,7 @@ void loop( void );
 
 int main( int argc, char ** argv )
 {
-    printf( "Starting up AbstractOS Dev...\n\n" );
+    printf( "Starting up ARDUINO SHELL Dev...\n\n" );
 
     setup();
     loop();
