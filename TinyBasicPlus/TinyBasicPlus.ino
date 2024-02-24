@@ -433,9 +433,6 @@ enum {
   KW_END,
   KW_RSEED,
   KW_CHAIN,
-#ifdef ENABLE_TONES
-  KW_TONEW, KW_TONE, KW_NOTONE,
-#endif
 #ifdef ARDUINO
 #ifdef ENABLE_EEPROM
   KW_ECHAIN, KW_ELIST, KW_ELOAD, KW_EFORMAT, KW_ESAVE, 
@@ -533,7 +530,7 @@ static const unsigned char okmsg[]            PROGMEM = "OK";
 static const unsigned char whatmsg[]          PROGMEM = "What? ";
 static const unsigned char howmsg[]           PROGMEM =	"How?";
 static const unsigned char sorrymsg[]         PROGMEM = "Sorry!";
-static const unsigned char initmsg[]          PROGMEM = "TinyBasic Plus " kVersion;
+static const unsigned char initmsg[]          PROGMEM = "AbstractOS Dev " kVersion;
 static const unsigned char memorymsg[]        PROGMEM = " bytes free.";
 #ifdef ARDUINO
 #ifdef ENABLE_EEPROM
