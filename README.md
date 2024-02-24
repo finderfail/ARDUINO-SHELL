@@ -1,10 +1,10 @@
-TinyBasic Plus
+Basic OS
 ==============
 
 A C implementation of Tiny Basic, with a focus on support for
 Arduino.  It was originally written by Gordon Brandly in the form
 of "68000 Tiny Basic", and then ported to C by Michael Field as
-"Arduino Basic", though still called "Tiny Basic" in the source
+"Arduino Basic", though still called "Basic OS" in the source
 files.
 
 TinyBasic Plus is an extension and modification upon the original
@@ -73,13 +73,6 @@ program.
 - AREAD( analogPin ) - *get the value of the analog pin*
 
 NOTE: "PINMODE" command removed as of version 0.11
-
-## Sound - Piezo wired with red/+ on pin 5 and black/- to ground
-- TONE freq,timems - play "freq" for "timems" milleseconds (1000 = 1 second)
-- TONEW freq,timems - same as above, but also waits for it to finish
-- NOTONE - stop playback of all playing tones
-
-NOTE: TONE commands are by default disabled
 
 
 # Example programs
