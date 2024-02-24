@@ -248,7 +248,8 @@ void handleSerial()
   getSerialLine( linebuf, kLineBuf, true );
   
   // command valve
-  if(      !strcmp( linebuf, "?" ))        serialAbout();
+  if(      !strcmp( linebuf, "help" ))        serialAbout();
+  else if( !strcmp( linebuf, "?" ))   serialAbout();
   else if( !strcmp( linebuf, "format" ))   formatEE();
   else if( !strcmp( linebuf, "dump" ))     dumpEE();
   else if( !strcmp( linebuf, "print" ))    printEE();

@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "port": "COM4",
-    "sketch": "EEExplorer\\EEExplorer.ino"
+    "sketch": "ARDshell\\ARDshell.ino"
 }
