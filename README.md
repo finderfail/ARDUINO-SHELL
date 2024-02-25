@@ -11,6 +11,7 @@ Simple Arduino shell to work with EEProm
 - print     text dump of the EEProm
 - record    erase EEProm until '.', buffer fill or reset
 - poke A D  poke value D into address a (decimal values)
+- neofetch  shows RAM and EEProm specs
 
 
 
